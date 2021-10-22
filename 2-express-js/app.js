@@ -15,10 +15,10 @@ app.get("/", function (req, res) {
 });
 app.use(errorHandler);
 
-if (app.get("env") === "development") {
-  server.listen(PORT, function () {
-    console.log(`Now running on PORT ${PORT}`);
-  });
-}
+// if (app.get("env") === "development") {
+app.listen(PORT, function () {
+  console.log(`Now running on PORT ${PORT}`);
+});
+// }
 
-module.exports = { app, server };
+// module.exports = { app, server };
