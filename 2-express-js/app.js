@@ -10,9 +10,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
 
-app.get("/", function (req, res) {
-  res.send({ message: "Hello World" });
-});
 app.use(errorHandler);
 
 let distDir = __dirname + "/dist/";

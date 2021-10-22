@@ -24,14 +24,6 @@ describe("Movie Router", () => {
   afterAll(async () => {
     await queryInterface.bulkDelete("Movies", {});
   });
-  describe("GET /", () => {
-    test("200 success", async () => {
-      const response = await request(app).get("/");
-      const { body, status } = response;
-      expect(status).toBe(200);
-      expect(body).toHaveProperty("message", "Hello World");
-    });
-  });
 
   describe("GET /search", () => {
     test("200 get movies success - data omdb has been registered before, return json message", async () => {
