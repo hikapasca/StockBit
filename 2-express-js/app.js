@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 const cors = require("cors");
 const routes = require("./route");
 const server = require("http").createServer(app);
@@ -15,6 +15,8 @@ app.get("/", function (req, res) {
 });
 app.use(errorHandler);
 
+let distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 if (app.get("env") !== "test") {
   app.listen(PORT, function () {
     console.log(`Now running on PORT ${PORT}`);
