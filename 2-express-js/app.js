@@ -21,4 +21,4 @@ if (app.get("env") !== "test") {
   });
 }
 
-// module.exports = { app, server };
+module.exports = { app, server };
