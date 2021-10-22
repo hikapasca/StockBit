@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "NODE_ENV=development nodemon app.js",
-    "test": "jest --runInBand --detectOpenHandles --forceExit"
+    "test": "jest --runInBand --detectOpenHandles --forceExit",
+    "start": "node app.js"
   },
   "keywords": [
     "omdpapi",
